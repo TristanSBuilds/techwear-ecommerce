@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script defer src="js/functions.js"></script>
+    <script src="https://kit.fontawesome.com/59f8ec7c20.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="btn-hamburguesa">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="menu-lateral">
+                <ul>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#novedades">Novedades</a></li>
+                    <li><a href="#inspiracion">Inspiración</a></li>
+                    <li><a href="#footer">Contacto</a></li>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Carrito</a></li>
+                </ul>
+            </div>
+            <div class="titulo-izq">
+                <h1><a href="#inicio">Techwear</a></h1>
+            </div>
+            <div class="titulos-centrales">
+                <ul>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#novedades">Novedades</a></li>
+                    <li><a href="#inspiracion">Inspiración</a></li>
+                    <li><a href="#footer">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="nav-der">
+                <form class="buscador" action="">
+                    <input type="text" placeholder="🔍 Buscar">
+                </form>
+                <div class="perfil">
+                    <button class="btn-perfil">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </button>
+                </div>
+                <div class="carrito">
+                    <button class="btn-carrito">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="banner" id="inicio">
+            <h2>THE FUTURE OF UTILITY</h2>
+            <p>Equipamiento técnico diseñado para el estilo de vida digital. Resistente, funcional y minimalista</p>
+            <a href="#novedades"><button>EXPLORAR COLECCIÓN</button></a>
+        </div>
+        <h3 id="categorias">Categorías Destacadas</h3>
+        <div class="categorias-destacadas">
+            <div class="categoria-ropa">
+                <div></div> 
+                <h3>Ropa</h3>
+            </div>
+            <div class="categoria-elec">
+                <div></div> 
+                <h3>Electrónica</h3>
+            </div>
+            <div class="categoria-acc">
+                <div></div> 
+                <h3>Accesorios</h3>
+            </div>
+        </div>
+        <h3 id="novedades">Novedades</h3>
+        <div class="novedades">
+        </div>
+        <div class="inspiracion" id="inspiracion">
+            <div class="inspiracion-img"></div>
+            <div class="inspiracion-texto">
+                <h3>FILOSOFÍA TECHWEAR</h3>
+                <p>No es solo ropa, es una extensión de tu entorno. Fusionamos materiales de alto rendimiento con la estética urbana más vanguardista</p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="pie">
+            <h3>Social</h3>
+            <div class="social">
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+            </div>
+        </div>
+        <div class="pie">
+            <h3>Categorías</h3>
+            <p>Hardware</p>
+            <p>Ropa</p>
+            <p>Accesorios</p>
+        </div>
+        <div class="pie">
+            <h3>Ayuda</h3>
+            <p>Guía de tallas</p>
+            <p>Envíos</p>
+            <p>Devoluciones</p>
+        </div>
+        <div class="pie">
+            <h3>Términos</h3>
+            <p>Privacidad</p>
+            <p>Aviso Legal</p>
+            <p>Cookies</p>
+        </div>
+        <div class="pie">
+            <h3>Cuenta</h3>
+            <p>Mis Pedidos</p>
+            <p>Ajustes</p>
+            <p>Soporte</p>
+        </div>
+        <div class="pie">
+            <h3>Newsletter Sign-up</h3>
+            <form action="" class="newsletter">
+                <input type="text" placeholder="enter email">
+            </form>
+            <p class="texto-newsletter">Acceso enviado. Revisa tu email</p>
+        </div>
+    </footer>
+    <section class="modal-carrito">
+        <button class="btn-cerrar-modal">X</button>
+        <div class="contenedor-carrito"></div>
+        <div class="total-compra">
+            <h3 class="total"></h3>
+            <button class="finalizar">Finalizar Compra</button>
+        </div>
+    </section>
+    <section class="modal-perfil">
+        <button class="btn-cerrar-modal">X</button>
+        <form class="form-perfil" action="">
+            <h3>Nueva Cuenta</h3>
+            <p>Escriba su nombre</p>
+            <input class="input-perfil" type="text" placeholder="Nombre">
+            <p>Escriba sus apellidos</p>
+            <input class="input-perfil" type="text" placeholder="Apellidos">
+            <p>Introduzca su correo electrónico</p>
+            <input class="input-perfil" type="text" placeholder="Correo">
+            <p>Crea una contraseña</p>
+            <input class="input-perfil" type="password" placeholder="Contraseña">
+            <button class="btn-formulario">Crear Cuenta</button>
+            <p class="texto-cuenta-creada">Cuenta creada con éxito!</p>
+        </form>
+    </section>
+</body>
+</html>
