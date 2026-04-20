@@ -32,15 +32,15 @@ function mostrarCarrito(){
     if(listaCarrito.length != 0){
         // recorremos cada articulo del carrito
         listaCarrito.forEach( productoCarrito => {
-            // le creamos un elemento div y la clase
+            // le creamos un elemento div y la clase para poder darle estilo
             let divProductoCarrito = document.createElement("div")
             divProductoCarrito.classList.add("producto-carrito")
 
             // añadimos el html al div que acabamos de crear con propiedades de la api como images, title y price
             divProductoCarrito.innerHTML = `
                 <img src="${productoCarrito.images[0]}">
-                <p>${productoCarrito.title}</p>
-                <p>${productoCarrito.price} €</p>
+                <p>${productoCarrito.title}:</p>
+                <p class="precio-producto">${productoCarrito.price} €</p>
                 <button class="btn-quitar-producto">X</button>
             `
             // añadimos el elemnto al DOM
@@ -52,7 +52,12 @@ function mostrarCarrito(){
             // seleccionamos el boton para eliminar articulos del carrito
             botonQuitarProducto = divProductoCarrito.querySelector(".btn-quitar-producto")
             botonQuitarProducto.addEventListener("click", () => {
-                divProductoCarrito.remove()
+
+                // guardamos en una nueva lista todos los productos menos el que tiene el id del que queremos eliminar
+                listaCarrito = listaCarrito.filter( producto => producto.id != productoCarrito.id)
+                
+                // volvemos a llamar la funcion para que se actualice
+                mostrarCarrito()
             })
         })
     // cuando el carrito esta vacio
@@ -90,7 +95,7 @@ function cargarProductos(){
                 </div>
                 <h3>${productoNovedad.title}</h3>
                 <p>${productoNovedad.description.substring(0, 100)}...</p>
-                <p>${productoNovedad.price} €</p>
+                <p class="precio-producto">${productoNovedad.price} €</p>
                 <button class="btn-carrito">Añadir al carrito</button>`
             
                 const botonIndividual = divNovedad.querySelector(".btn-carrito");

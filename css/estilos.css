@@ -303,6 +303,10 @@ div.total-compra{
     margin-top: 30px;
     padding-bottom: 100px;
 }
+.precio-producto{
+    color: #00FFFF;
+    font-weight: bold;
+}
 .modal-perfil{
     display: none;
     justify-content: center;
